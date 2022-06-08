@@ -47,6 +47,8 @@ $ docker container exec \
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 ```
 
+### Next steps: Install suggested and create user
+
 
 
 

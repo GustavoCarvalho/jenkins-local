@@ -2,17 +2,17 @@
 
 ### Jenkins pull image
 ```
-$ docker image pull jenkins/jenkins:lts
+docker image pull jenkins/jenkins:lts
 ```
 
 ### Jenkins create volume
 ```
-$ docker volume create jenkins
+docker volume create jenkins
 ```
 
 ### Run the container by attaching the volume and assigning the targeted port. 
 ```
-$ docker container run -d \
+docker container run -d \
     -p [YOUR PORT]:8080 \
     -v [YOUR VOLUME]:/var/jenkins_home \
     --name jenkins-local \
@@ -27,7 +27,7 @@ $ docker container run -d \
 
 And now, we’re ready to take a look at an example of how you could run this command:
 ```
-$ docker container run -d \
+docker container run -d \
     -p 8080:8080 \
     -v jenkins:/var/jenkins_home \
     --name jenkins-local \
@@ -36,13 +36,13 @@ $ docker container run -d \
 
 ### See your docker container running
 ```
-$ docker ps -a
+docker ps -a
 ```
 Copy CONTAINER ID
 
 ### Get password
 ```
-$ docker container exec \
+docker container exec \
     [CONTAINER ID or NAME] \
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 ```

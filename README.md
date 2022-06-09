@@ -16,7 +16,8 @@ docker container run -d \
     -p [YOUR PORT]:8080 \
     -v [YOUR VOLUME]:/var/jenkins_home \
     --name jenkins-local \
-    jenkins/jenkins:lts
+    jenkins/jenkins:lts \
+    --privileged
 ```
 
 -d: detached mode
@@ -31,7 +32,8 @@ docker container run -d \
     -p 8080:8080 \
     -v jenkins:/var/jenkins_home \
     --name jenkins-local \
-    jenkins/jenkins:lts
+    jenkins/jenkins:lts \
+    --privileged
 ```
 
 ### See your docker container running
